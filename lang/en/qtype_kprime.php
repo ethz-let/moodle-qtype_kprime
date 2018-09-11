@@ -61,3 +61,4 @@ $string['tasktitle'] = 'Task title';
 $string['true'] = 'True';
 $string['optionsandfeedback'] = 'Options and Feedback';
 $string['correctresponse'] = 'Correct Response';
+$string['privacy:metadata'] = 'Kprime(ETH) does not store any personal data';
