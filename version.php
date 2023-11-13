@@ -34,4 +34,4 @@ $plugin->version = 2023082000;
 $plugin->requires = 2021050100; // Moodle >=3.11+.
 
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '4 possible from Moodle 3.11 (Transitional)';
+$plugin->release = '4.1';
