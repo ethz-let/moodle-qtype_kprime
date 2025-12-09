@@ -43,5 +43,19 @@ function xmldb_qtype_kprime_upgrade($oldversion) {
         $dbman->rename_field($table, $oldfield, 'shuffleanswers');
     }
 
+    if ($oldversion < 2025052101) {
+        // Define field contextheader to be added to qtype_kprime_options.
+        $table = new xmldb_table('qtype_kprime_options');
+        $field = new xmldb_field('contextheader', XMLDB_TYPE_TEXT, null, null, null, null, null, 'numberofcolumns');
+
+        // Conditionally launch add field contextheader.
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // Kprime savepoint reached.
+        upgrade_plugin_savepoint(true, 2025052101, 'qtype', 'kprime');
+    }
+
     return true;
 }

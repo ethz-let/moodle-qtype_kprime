@@ -19,6 +19,8 @@
 					DEFAULT="4" SEQUENCE="false" COMMENT="The number options used by kprime questions." />
 				<FIELD NAME="numberofcolumns" TYPE="int" LENGTH="4" NOTNULL="true"
 					DEFAULT="2" SEQUENCE="false" COMMENT="The number of responses of kprime questions." />
+				<FIELD NAME="contextheader" TYPE="text" NOTNULL="false"
+					SEQUENCE="false" COMMENT="Optional header text displayed as an additional column header after the true/false columns." />
 			</FIELDS>
 			<KEYS>
 				<KEY NAME="primary" TYPE="primary" FIELDS="id" />

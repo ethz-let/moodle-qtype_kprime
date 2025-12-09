@@ -327,6 +327,12 @@ class qtype_kprime_edit_form extends question_edit_form {
 
         $mform->addElement('header', 'optionsandfeedbackheader', get_string('optionsandfeedback', 'qtype_kprime'));
 
+        // Add contextheader field.
+        $mform->addElement('text', 'contextheader', get_string('contextheader', 'qtype_kprime'), ['size' => 50, 'maxlength' => 255]);
+        $mform->setType('contextheader', PARAM_TEXT);
+        $mform->setDefault('contextheader', '');
+        $mform->addHelpButton('contextheader', 'contextheader', 'qtype_kprime');
+
         // Add the response text fields.
         $responses = [];
 
@@ -455,6 +461,7 @@ class qtype_kprime_edit_form extends question_edit_form {
             $question->columns = $question->options->columns;
             $question->numberofrows = count($question->rows);
             $question->numberofcolumns = count($question->columns);
+            $question->contextheader = isset($question->options->contextheader) ? $question->options->contextheader : '';
         }
 
         if (isset($this->question->id)) {

@@ -30,6 +30,8 @@
 $string['configintro'] = 'Default values for kprime questions.';
 $string['configscoringmethod'] = 'Default scoring method for kprime questions.';
 $string['configshuffleanswers'] = 'Default setting for option shuffling in kprime questions.';
+$string['contextheader'] = 'Context header';
+$string['contextheader_help'] = 'Optional header text that will be displayed as an additional column header after the true/false columns to provide context for the statements.';
 $string['correctresponse'] = 'Correct Response';
 $string['deletedchoice'] = 'This choice was deleted after the attempt was started.';
 $string['enterfeedbackhere'] = 'Enter feedback here.';

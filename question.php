@@ -56,6 +56,8 @@ class qtype_kprime_question extends question_graded_automatically_with_countback
     public $options;
     /** @var string answernumbering */
     public $answernumbering;
+    /** @var string contextheader */
+    public $contextheader;
 
     /**
      * (non-PHPdoc).

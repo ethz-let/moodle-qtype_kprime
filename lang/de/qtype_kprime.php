@@ -30,6 +30,8 @@
 $string['configintro'] = 'Standardeinstellungen für Kprim-Fragen.';
 $string['configscoringmethod'] = 'Standard Bewertung für Kprim-Fragen.';
 $string['configshuffleanswers'] = 'Standardeinstellung für das Mischen der Wahlantworten.';
+$string['contextheader'] = 'Kontext-Kopfzeile';
+$string['contextheader_help'] = 'Optionaler Text, der als zusätzliche Spaltenkopfzeile nach den Wahrheitsauswahlen angezeigt wird, um den Kontext für die Aussagen zu erläutern.';
 $string['correctresponse'] = 'Richtige Antwort';
 $string['deletedchoice'] = 'Diese Antwort wurde gelöscht, nachdem der Test gestartet worden ist.';
 $string['enterfeedbackhere'] = 'Feedback hinzufügen.';

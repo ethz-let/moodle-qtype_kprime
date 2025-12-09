@@ -123,6 +123,10 @@ class qtype_kprime extends question_type {
             $question->options->shuffleanswers = $kprimeconfig->shuffleanswers;
         }
 
+        if (!isset($question->options->contextheader)) {
+            $question->options->contextheader = '';
+        }
+
         if (!isset($question->options->scoringmethod)) {
             $question->options->scoringmethod = $kprimeconfig->scoringmethod;
         }
@@ -280,6 +284,12 @@ class qtype_kprime extends question_type {
         $options->shuffleanswers = $question->shuffleanswers;
         $options->numberofrows = $question->numberofrows;
         $options->numberofcolumns = $question->numberofcolumns;
+        $options->contextheader = '';
+        if (property_exists($question, 'contextheader') && !empty($question->contextheader)) {
+            $options->contextheader = trim($question->contextheader);
+        } elseif (isset($question->contextheader)) {
+            $options->contextheader = trim($question->contextheader);
+        }
 
         $DB->update_record('qtype_kprime_options', $options);
 
@@ -497,6 +507,7 @@ class qtype_kprime extends question_type {
         $question->rows = $questiondata->options->rows;
         $question->columns = $questiondata->options->columns;
         $question->weights = $questiondata->options->weights;
+        $question->contextheader = isset($questiondata->options->contextheader) ? $questiondata->options->contextheader : '';
     }
 
     /**
